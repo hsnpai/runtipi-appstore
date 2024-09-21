@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema.json",
+  "name": "Supabase",
+  "available": true,
+  "exposable": true,
+  "tipi_version": 28,
+  "version": "latest",  # You may want to specify a version
+  "port": 5432,  # Default Supabase port
+  "id": "supabase",
+  "categories": [
+    "database"
+  ],
+  "description": "Supabase is an open-source Firebase alternative for building realtime applications. It provides a Postgres database, authentication, storage, and more.",
+  "short_desc": "Open-source backend for realtime apps",
+  "author": "Supabase Team",
+  "source": "https://supabase.io",
+  "requirements": {
+    "ports": [
+      5432  # Supabase port
+    ]
+  },
+  "environment_variables": [  # Use environment variables for sensitive data
+    {
+      "key": "SUPABASE_URL",
+      "label": "Supabase URL",
+      "description": "The URL of your Supabase instance",
+      "required": true
+    },
+    {
+      "key": "SUPABASE_ANON_KEY",
+      "label": "Supabase Anon Key",
+      "description": "The Anon Key for your Supabase instance (optional)",
+      "required": false
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ]
+}
